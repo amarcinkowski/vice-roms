@@ -8,8 +8,8 @@ Usage
 ```bash
 cd ~/git
 git clone https://github.com/amarcinkowski/vice-roms
-cd vice-roms
-ROMSPATH=$PWD
-echo $ROMSPATH 
-x64sc +confirmonexit -saveres -basic "$ROMSPATH/C64/basic" -chargen "$ROMSPATH/C64/chargen" -kernal "$ROMSPATH/C64/kernal"  +VICIIdsize +VICIIdscan -VICIIextpal -VICIIpalette "colodore" -drive8type "0"
+cat <<EOF >> ~/.zshrc
+ROMSPATH="$HOME/git/vice-roms"
+alias xx='x64sc +confirmonexit -saveres -basic "$ROMSPATH/C64/basic" -chargen "$ROMSPATH/C64/chargen" -kernal "$ROMSPATH/C64/kernal"  +VICIIdsize +VICIIdscan -VICIIextpal -VICIIpalette "colodore"'
+EOF
 ```
